@@ -10,3 +10,10 @@ profile.yml
 
 data/raw/
 
+
+# keep ALL local data out of Git
+
+data/
+*.csv
+*.xlsx
+
