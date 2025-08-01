@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+
+#VSCODE settings
+.vscode/
+
+#DBT and Snowflake credentials
+profile.yml
+*.key
+
+data/raw/
+
