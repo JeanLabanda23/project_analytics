@@ -4,9 +4,11 @@ from pathlib import Path
 import pandas as pd
 import snowflake.connector
 from snowflake.connector.pandas_tools import write_pandas
+import re
+
 
 # route to parquet file
-BASE_DIR = Path(__file__).resolve.parents[1]
+BASE_DIR = Path(__file__).resolve().parents[1]
 PROCESSED = BASE_DIR/"data"/"processed"
 PQ_FILE = "SALES_DATA_long.parquet"
 pq_path = PROCESSED / PQ_FILE
@@ -14,6 +16,13 @@ pq_path = PROCESSED / PQ_FILE
 print (f"🔍 Leyendo Parquet desde: {pq_path}")
 df = pd.read_parquet(pq_path)
 print(f"✅ Parquet leído: {len(df)} filas, {len(df.columns)} columnas")
+
+#sanitize columns for snowflake
+df.columns = [
+    re.sub(r'[^0-9A-Za-z_]', '_', col).upper()
+    for col in df.columns
+]
+print("🔄 Columnas tras sanitizar:", list(df.columns))
 
 #connect to snowflake using environment variables
 ctx = snowflake.connector.connect(
