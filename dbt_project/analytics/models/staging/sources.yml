@@ -5,4 +5,5 @@ sources:
     database: PROJECT_DB
     schema: RAW
     tables:
-      - name: SALES_MONTHLY
+      - name: sales_monthly
+        identifier: SALES_MONTHLY
