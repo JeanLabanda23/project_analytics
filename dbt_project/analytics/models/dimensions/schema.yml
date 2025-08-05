@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_month
+    description: "Dimensión de meses basada en los períodos de ventas"
+    columns:
+      - name: month_date
+        description: "Primer día de cada mes utilizado en ventas"
+        tests:
+          - not_null
+          - unique
+      - name: year
+        description: "Año numérico"
+        tests:
+          - not_null
+      - name: month
+        description: "Número de mes (1–12)"
+        tests:
+          - not_null
+      - name: month_name
+        description: "Nombre del mes en inglés (e.g. January)"
+        tests:
+          - not_null
