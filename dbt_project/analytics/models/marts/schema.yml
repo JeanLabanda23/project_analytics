@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: mart_sales_monthly
+    description: "Métricas agregadas mensuales de ventas por producto"
+    columns:
+      - name: product
+        description: "Nombre del producto"
+        tests:
+          - not_null
+      - name: period
+        description: "Primer día del mes de la métrica"
+        tests:
+          - not_null
+      - name: total_metric_value
+        description: "Suma de metric_value por producto y mes"
+        tests:
+          - not_null
