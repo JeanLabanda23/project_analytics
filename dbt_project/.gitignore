@@ -1,0 +1,7 @@
+# dbt artifacts
+dbt_modules/
+target/
+logs/
+
+# local IDE/project files
+.DS_Store
