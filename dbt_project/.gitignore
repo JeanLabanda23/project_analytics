@@ -22,3 +22,8 @@ logs/
 
 # Mac OS
 .DS_Store
+
+# dbt local deps & artifacts
+dbt_modules/
+target/
+logs/
