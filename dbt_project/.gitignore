@@ -1,7 +1,24 @@
+# Python venv
+.venv/
+venv/
+
+# Bytecode
+__pycache__/
+*.py[cod]
+
+# Datos sensibles
+data/
+
+# Power BI
+*.pbix
+
 # dbt artifacts
-dbt_modules/
-target/
+dbt_project/analytics/dbt_modules/
+dbt_project/analytics/target/
+dbt_project/analytics/logs/
+
+# Logs generales
 logs/
 
-# local IDE/project files
+# Mac OS
 .DS_Store
