@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_sales_monthly
+    description: "Vista staging con datos crudos de ventas mensuales"
+    columns:
+      - name: corp
+        description: "Código de la corporación"
+        tests:
+          - not_null
+      - name: period
+        description: "Fecha (primer día) del mes de la métrica"
+        tests:
+          - not_null
+      - name: metric_value
+        description: "Valor numérico de la métrica"
+        tests:
+          - not_null

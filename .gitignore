@@ -1,19 +1,15 @@
-# Python cache
+# Python
+.venv/
 __pycache__/
 
-#VSCODE settings
-.vscode/
-
-#DBT and Snowflake credentials
-profile.yml
-*.key
-
-data/raw/
-
-
-# keep ALL local data out of Git
-
+# Data & artifacts
 data/
-*.csv
-*.xlsx
+*.pbix
 
+# dbt artifacts
+dbt_project/analytics/dbt_modules/
+dbt_project/analytics/target/
+dbt_project/analytics/logs/
+
+# Local credentials (por si acaso)
+profiles.yml
