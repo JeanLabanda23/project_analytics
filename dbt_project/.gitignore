@@ -29,3 +29,6 @@ target/
 logs/
 
 git restore --staged Pharmaceutical Market Ecuador (PME).pbix
+
+# Ignorar logs de dbt
+dbt_project/logs/
