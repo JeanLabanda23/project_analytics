@@ -13,3 +13,6 @@ dbt_project/analytics/logs/
 
 # Local credentials (por si acaso)
 profiles.yml
+
+# Ignorar logs de dbt
+dbt_project/logs/
